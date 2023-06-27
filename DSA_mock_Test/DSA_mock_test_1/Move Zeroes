@@ -1,0 +1,20 @@
+// time complexity-O(n)
+// space complexity-O(1)
+
+class Solution {
+    public void moveZeroes(int[] nums) {
+       //start with the first position
+       int ip=0;
+
+       for(int i=0; i<nums.length;i++){
+           //fill all non-zero numbers
+           if(nums[i]!=0){
+               nums[ip]=nums[i];
+               ip++;
+           }
+       } 
+       while(ip<nums.length){
+           nums[ip++]=0;
+       }
+    }
+}
